@@ -87,3 +87,32 @@ review
 "I absolutely love this product!"  
 "The delivery service was terrible."  
 "The product is okay but could be better."
+
+**Sample API Call:**
+You can test this API using a tool like curl. Here's how to call the API using the command line:
+
+bash
+curl -X POST http://localhost:5000/analyze_sentiment -F "file=@reviews.csv"  
+Sample Output:
+The output will be a structured JSON response with aggregated sentiment scores:
+
+json
+{  
+  "positive": 0.33,  
+  "negative": 0.33,  
+  "neutral": 0.33  
+}  
+This output indicates that the overall sentiment across the provided reviews is evenly distributed among positive, negative, and neutral sentiments.
+
+4. Analysis of Results
+4.1 Accuracy and Limitations:
+Keyword Matching: The current implementation uses a simplistic keyword matching approach for sentiment analysis. While this approach works for basic sentiment detection, it may miss nuanced expressions of sentiment, such as sarcasm or mixed sentiments within a single review. For example, "I love the product but hate the delivery" would not be correctly handled as both positive and negative sentiment.
+
+LLM Response Handling: The LLM from Groq provides a generated response to the review, which is then analyzed. However, further refinement is needed to parse more complex or creative model outputs effectively.
+
+4.2 Possible Improvements:
+Advanced Sentiment Models: Integrating a pre-trained sentiment analysis model, such as VADER or BERT, could significantly improve accuracy. These models consider context and have been trained specifically on sentiment analysis tasks.
+
+Handling Longer Reviews: For long reviews with mixed sentiments, segmenting the review into smaller parts and analyzing each segment separately could lead to more accurate overall results.
+
+Error Handling Enhancements: While the current implementation checks for file format issues, it could be extended to handle other errors, such as missing data, malformed content, or Groq API failures (e.g., network timeouts).
