@@ -20,7 +20,7 @@ def analyze_sentiment():
     reviews = df['review'].tolist()
 
     # Groq API integration
-    client = Groq(api_key='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')
+    client = Groq(api_key='#YOUR_API_KEY')
     model = "llama3-8b-8192"  
 
     results = []
