@@ -104,7 +104,7 @@ json
 }  
 This output indicates that the overall sentiment across the provided reviews is evenly distributed among positive, negative, and neutral sentiments.
 
-4. Analysis of Results
+**## 4. Analysis of Results**
 4.1 Accuracy and Limitations:
 Keyword Matching: The current implementation uses a simplistic keyword matching approach for sentiment analysis. While this approach works for basic sentiment detection, it may miss nuanced expressions of sentiment, such as sarcasm or mixed sentiments within a single review. For example, "I love the product but hate the delivery" would not be correctly handled as both positive and negative sentiment.
 
