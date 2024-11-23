@@ -17,8 +17,8 @@ This project implements a Sentiment Analysis API that processes user-uploaded CS
 - [4. Analysis of Results](#4-analysis-of-results)  
   - [4.1 Accuracy and Limitations](#41-accuracy-and-limitations)  
   - [4.2 Possible Improvements](#42-possible-improvements)  
-- [5. Contributing](#6-contributing)  
-- [6. License](#7-license)  
+- [5. Contributing] 
+ 
 
 ## 1. Approach to Solving the Problem  
 
@@ -116,3 +116,8 @@ Advanced Sentiment Models: Integrating a pre-trained sentiment analysis model, s
 Handling Longer Reviews: For long reviews with mixed sentiments, segmenting the review into smaller parts and analyzing each segment separately could lead to more accurate overall results.
 
 Error Handling Enhancements: While the current implementation checks for file format issues, it could be extended to handle other errors, such as missing data, malformed content, or Groq API failures (e.g., network timeouts).
+
+5. Contributing
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+Feel free to modify any sections as needed! If you have any other requests or need further assistance, just let me know!
